@@ -16,8 +16,8 @@ $("ul").on("click", "span" ,function(){
 
 
 //function to add list when enter key is pressed on input
-$("input[type='text']").keypress(function(){
-  if(event.which === 13){
+$("input[type='text']").on('keyup', function(e){
+  if(e.which === 13){
      var ToDotxt= $(this).val();
     $(this).val("");
   $("ul").append("<li>"+ToDotxt+" <span><i class='fa fa-trash'></i></span></li>");    
